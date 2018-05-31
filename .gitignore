@@ -10,3 +10,4 @@
 #ignore compiled files
 **/out
 **/build
+/target
