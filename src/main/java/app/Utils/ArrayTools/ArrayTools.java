@@ -6,7 +6,7 @@ public class ArrayTools {
 
     public static int[] moveMatrixToArray(int[][] matrix) {
         int[] data;
-        if(matrix.length==0)
+        if (matrix.length == 0)
             return new int[0];
         data = new int[matrix.length * matrix[0].length];
 

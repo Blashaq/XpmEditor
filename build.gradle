@@ -1,18 +1,22 @@
 plugins {
     id 'java'
-    id 'application'
     id 'idea'
+    id "com.github.johnrengelman.shadow" version "2.0.4"
 }
 
-mainClassName = 'App'
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.javatuples/javatuples
     compile group: 'org.javatuples', name: 'javatuples', version: '1.2'
-
-    testCompile 'junit:junit:4.12'
 }
 
 repositories {
     jcenter()
+}
+
+shadowJar {
+    manifest {
+        attributes(
+                'Main-Class': 'app.MainApp'
+        )
+    }
 }
